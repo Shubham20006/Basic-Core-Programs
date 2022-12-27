@@ -11,42 +11,24 @@ namespace HelloWorld
 
         public static void Calculate()
         {
-            int tailcount = 0;
-            int headcount = 0;
-            int tailPercentage;
-            int headPercentage;
-            Console.WriteLine("Enter no. of flips :- ");
-            int flip = Convert.ToInt32(Console.ReadLine());
-            if (flip > 0)
+            Console.WriteLine("Enter the year between 1000 to 9999. :- ");
+            int year = Convert.ToInt32(Console.ReadLine());
+            if (year > 1000 && year < 9999)
             {
-                for (int i = 0; i < flip; i++)
+                int A = (year % 4);
+                if (A == 0)
                 {
-                    Random random = new Random();
-                    int num = random.Next(2);
-                    Console.WriteLine(num);
-                    if (num == 0)
-                    {
-                        tailcount++;
-                    }
-                    else
-                    {
-                        headcount++;
-                    }
+                    Console.WriteLine("This year is a Leap year.");
                 }
-                Console.WriteLine("The tailcount is :- " + tailcount);
-                Console.WriteLine("The headcount is :- " + headcount);
-
-                headPercentage = (headcount * 100) / flip;
-                tailPercentage = (tailcount * 100) / flip;
-
-                Console.WriteLine("The tailPercentage is :- " + tailPercentage + "%");
-                Console.WriteLine("The headPercentage is :- " + headPercentage + "%");
+                else
+                {
+                    Console.WriteLine("This year is Not a Leap year.");
+                }
             }
             else
             {
-                Console.WriteLine("Please Enter the positive intiger.");
+                Console.WriteLine("Invalid Input");
             }
-
         }
 
     }
