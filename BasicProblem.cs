@@ -11,19 +11,21 @@ namespace HelloWorld
 
         public static void Calculate()
         {
-            //  Program to Swap Two Numbers
+            //  Program to Check Whether a Number is Even or Odd
 
             Console.WriteLine("Enter the First Number  :- ");
             int N1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the Second Number :- ");
-            int N2 = Convert.ToInt32(Console.ReadLine());
-            int a = N1;
-            N1 = N2;
-            N2 = a;
 
-            Console.WriteLine("...After Swapping...");
-            Console.WriteLine("The First Number  is :-  " +N1 );
-            Console.WriteLine("The Second Number is :-  " + N2);
+            int a = (N1 % 2);
+            if (a == 0)
+            { 
+                Console.WriteLine("...Even Number...");
+            }
+            else
+            {
+                Console.WriteLine( "...Odd Number...");
+            }
+            
         }
 
     }
