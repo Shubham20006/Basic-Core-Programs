@@ -10,7 +10,8 @@ namespace HelloWorld
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Basic Core Programs.");
+            //Console.WriteLine("Welcome to the Basic Core Programs.");
+            BasicProblem.Calculate();
         }
     }
 }
