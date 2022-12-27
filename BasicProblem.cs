@@ -11,16 +11,19 @@ namespace HelloWorld
 
         public static void Calculate()
         {
-          //  Program to Compute Quotient and Remainder
+            //  Program to Swap Two Numbers
 
-            Console.WriteLine("Enter the Number that you want to devide(dividend). :- ");
+            Console.WriteLine("Enter the First Number  :- ");
             int N1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the Number (Divisor). :- ");
+            Console.WriteLine("Enter the Second Number :- ");
             int N2 = Convert.ToInt32(Console.ReadLine());
-            int Quotient = (N1 / N2);
-            int REMAINDER = (N1 % N2);
-            Console.WriteLine("The Quotient is :-  " + Quotient);
-            Console.WriteLine("The Remainder is :-  " + REMAINDER);
+            int a = N1;
+            N1 = N2;
+            N2 = a;
+
+            Console.WriteLine("...After Swapping...");
+            Console.WriteLine("The First Number  is :-  " +N1 );
+            Console.WriteLine("The Second Number is :-  " + N2);
         }
 
     }
