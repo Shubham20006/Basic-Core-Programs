@@ -11,19 +11,22 @@ namespace HelloWorld
 
         public static void Calculate()
         {
-            double sum = 0;
-            Console.WriteLine("Enter the  value :- ");
-            double N = Convert.ToDouble(Console.ReadLine());
-
-            if (N > 0)
+            Console.WriteLine("Enter the Number :- ");
+            int Num = Convert.ToInt32(Console.ReadLine());
+            if (Num > 0)
             {
-
-                for (int i = 1; i <= N; i++)
+                for (int i = 2; i < Num; i++)
                 {
-                    Console.Write("1/" + i + " + ");
-                    sum = sum + (1 / (double)i);
+                    while (Num % i == 0)
+                    {
+                        Console.Write(i + " and ");
+                        Num = Num / i;
+                    }
                 }
-                Console.WriteLine("\n\nThe Nth harmonic number is :- " + sum);
+                if (Num > 2)
+                {
+                    Console.Write(Num);
+                }
             }
             else
             {
