@@ -11,23 +11,19 @@ namespace HelloWorld
 
         public static void Calculate()
         {
-            Console.WriteLine("Enter the year between 1000 to 9999. :- ");
-            int year = Convert.ToInt32(Console.ReadLine());
-            if (year > 1000 && year < 9999)
+            Console.WriteLine("Enter the power value :- ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            if (0 <= N && N < 31)
             {
-                int A = (year % 4);
-                if (A == 0)
+                for (int i = 0; i <= N; i++)
                 {
-                    Console.WriteLine("This year is a Leap year.");
-                }
-                else
-                {
-                    Console.WriteLine("This year is Not a Leap year.");
+                    double a = Math.Pow(2, i);
+                    Console.WriteLine(+a);
                 }
             }
             else
             {
-                Console.WriteLine("Invalid Input");
+                Console.WriteLine("Enter the number less than 31.");
             }
         }
 
