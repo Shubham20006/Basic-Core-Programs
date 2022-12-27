@@ -11,27 +11,16 @@ namespace HelloWorld
 
         public static void Calculate()
         {
-            Console.WriteLine("Enter the Number :- ");
-            int Num = Convert.ToInt32(Console.ReadLine());
-            if (Num > 0)
-            {
-                for (int i = 2; i < Num; i++)
-                {
-                    while (Num % i == 0)
-                    {
-                        Console.Write(i + " and ");
-                        Num = Num / i;
-                    }
-                }
-                if (Num > 2)
-                {
-                    Console.Write(Num);
-                }
-            }
-            else
-            {
-                Console.WriteLine("Enter number greater than 0.");
-            }
+          //  Program to Compute Quotient and Remainder
+
+            Console.WriteLine("Enter the Number that you want to devide(dividend). :- ");
+            int N1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Number (Divisor). :- ");
+            int N2 = Convert.ToInt32(Console.ReadLine());
+            int Quotient = (N1 / N2);
+            int REMAINDER = (N1 % N2);
+            Console.WriteLine("The Quotient is :-  " + Quotient);
+            Console.WriteLine("The Remainder is :-  " + REMAINDER);
         }
 
     }
