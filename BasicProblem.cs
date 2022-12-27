@@ -11,21 +11,28 @@ namespace HelloWorld
 
         public static void Calculate()
         {
-            // Program to Check Whether an Alphabet is Vowel or Consonant
-           
-            Console.WriteLine("Enter the Single character  :- ");
-            char ch = Convert.ToChar(Console.ReadLine());
-           
+            // Program to Find the Largest Among Three Numbers
 
-            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') 
-            { 
-                Console.WriteLine("...VOWEL...");
+            Console.WriteLine("Enter the Starting Number :- ");
+            int N1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Ending Number :- ");
+            int N2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Starting Number :- ");
+            int N3 = Convert.ToInt32(Console.ReadLine());
+            
+            if(N1>N2 && N1>N3)
+            {
+                Console.WriteLine("Greater Number is " + N1);
+            }
+            else if (N2 > N3 )
+            {
+                Console.WriteLine("Greater Number is " + N2);
             }
             else
             {
-                Console.WriteLine( "...CONSONANT...");
+                Console.WriteLine("Greater Number is " + N3);
             }
-            
+
         }
 
     }
