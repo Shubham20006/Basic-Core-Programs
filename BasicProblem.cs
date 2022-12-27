@@ -11,19 +11,19 @@ namespace HelloWorld
 
         public static void Calculate()
         {
-            //  Program to Check Whether a Number is Even or Odd
+            // Program to Check Whether an Alphabet is Vowel or Consonant
+           
+            Console.WriteLine("Enter the Single character  :- ");
+            char ch = Convert.ToChar(Console.ReadLine());
+           
 
-            Console.WriteLine("Enter the First Number  :- ");
-            int N1 = Convert.ToInt32(Console.ReadLine());
-
-            int a = (N1 % 2);
-            if (a == 0)
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') 
             { 
-                Console.WriteLine("...Even Number...");
+                Console.WriteLine("...VOWEL...");
             }
             else
             {
-                Console.WriteLine( "...Odd Number...");
+                Console.WriteLine( "...CONSONANT...");
             }
             
         }
