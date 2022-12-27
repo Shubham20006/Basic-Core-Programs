@@ -11,19 +11,23 @@ namespace HelloWorld
 
         public static void Calculate()
         {
-            Console.WriteLine("Enter the power value :- ");
-            int N = Convert.ToInt32(Console.ReadLine());
-            if (0 <= N && N < 31)
+            double sum = 0;
+            Console.WriteLine("Enter the  value :- ");
+            double N = Convert.ToDouble(Console.ReadLine());
+
+            if (N > 0)
             {
-                for (int i = 0; i <= N; i++)
+
+                for (int i = 1; i <= N; i++)
                 {
-                    double a = Math.Pow(2, i);
-                    Console.WriteLine(+a);
+                    Console.Write("1/" + i + " + ");
+                    sum = sum + (1 / (double)i);
                 }
+                Console.WriteLine("\n\nThe Nth harmonic number is :- " + sum);
             }
             else
             {
-                Console.WriteLine("Enter the number less than 31.");
+                Console.WriteLine("Enter number greater than 0.");
             }
         }
 
